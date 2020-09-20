@@ -8,7 +8,7 @@ Updated Date: Sep 20, 2020
 <code>Configuration sample</code>
 ```
 
-Provide [links](..) where relevant.
+Provide [links](README.md) where relevant.
 
 - [ ] Or checklists
 - [ ] To provide step by step instructions

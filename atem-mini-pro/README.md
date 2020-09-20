@@ -1,8 +1,8 @@
 # Atem Mini Pro
 
-## ATEM Switcher Setup
+## Adding Vimeo Live to ATEM Switcher Software
 
-Install latest [ATEM Switcher Software](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers) to interface with ATEM Mini Pro
+Install latest [ATEM Switcher Software](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers) to interface with ATEM Mini Pro.
 
 ```bash
 sudo vim /Library/Application\ Support/Blackmagic\ Design/Switchers/Streaming.xml
@@ -61,3 +61,7 @@ before the end `</streaming>` add:
         </profiles>
 </service>
 ```
+
+After setting this up, make sure to setup the pick the correct RTMP server and input the stream key in the output section & test it by streaming live:
+
+![Adding stream key to Vimeo Live](images/00_streamkey.png)
