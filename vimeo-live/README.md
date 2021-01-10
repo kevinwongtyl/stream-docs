@@ -4,7 +4,7 @@ Vimeo has a new streaming platform & ability to stream live events. This is a TL
 ## Create New Live Event
 To create a new live event:
 ![Create New Live Event](images/00_create-live-event.png)
-![Create New Live Event Details](images/create-live-event-details.png)
+![Create New Live Event Details](images/00_create-live-event-details.png)
 
 ## Non-Public Event
 If you don't want the events to public makes sure to set it off
