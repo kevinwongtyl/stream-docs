@@ -15,7 +15,7 @@ before the end `</streaming>` add:
         <servers>
                 <server>
                         <name>Primary</name>
-                        <url>rtmp://rtmp-global.cloud.vimeo.com/live</url>
+                        <url>rtmps://rtmp-global.cloud.vimeo.com/live</url>
                 </server>
         </servers>
         <profiles>
