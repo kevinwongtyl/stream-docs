@@ -106,7 +106,6 @@ Adds a local RTMP connection to a Streaming Bridge.  We use this to add a progra
                         </config>
                 </profile>
                 <profile>
-                <profile>
                         <name>Streaming Low</name>
                         <config resolution="1080p" fps="60">
                                 <bitrate>4500000</bitrate>
