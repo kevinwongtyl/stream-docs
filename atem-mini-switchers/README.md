@@ -1,4 +1,4 @@
-# Atem Mini Pro
+# Atem Mini
 
 ## Adding Vimeo Live to ATEM Switcher Software
 
@@ -65,3 +65,60 @@ before the end `</streaming>` add:
 After setting this up, make sure to setup the pick the correct RTMP server and input the stream key in the output section & test it by streaming live:
 
 ![Adding stream key to Vimeo Live](images/00_streamkey.png)
+
+## Adding Streaming Bridge to ATEM Switcher Software
+Adds a local RTMP connection to a Streaming Bridge.  We use this to add a program SDI and HDMI output to the ATEM Mini Extreme with an explicitly controlled bitrate.  This also ends up being the recording quality, since the ATEM Mini Extreme uses the same quality settings for recording as it does streaming.
+
+```xml
+<service>
+        <name>Streaming Bridge</name>
+        <servers>
+                <server>
+                        <name>Local Ethernet</name>
+                        <url>rtmp://StreamingBridge-9433F61CCC6E46ADAB8175367E9AD427.local:1935/app</url>
+                </server>
+        </servers>
+        <profiles>
+                <profile>
+                        <name>Streaming High</name>
+                        <config resolution="1080p" fps="60">
+                                <bitrate>10000000</bitrate>
+                                <audio-bitrate>320000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                        <config resolution="1080p" fps="30">
+                                <bitrate>7000000</bitrate>
+                                <audio-bitrate>320000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                </profile>
+                <profile>
+                        <name>Streaming Medium</name>
+                        <config resolution="1080p" fps="60">
+                                <bitrate>7000000</bitrate>
+                                <audio-bitrate>128000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                        <config resolution="1080p" fps="30">
+                                <bitrate>4500000</bitrate>
+                                <audio-bitrate>128000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                </profile>
+                <profile>
+                <profile>
+                        <name>Streaming Low</name>
+                        <config resolution="1080p" fps="60">
+                                <bitrate>4500000</bitrate>
+                                <audio-bitrate>128000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                        <config resolution="1080p" fps="30">
+                                <bitrate>3000000</bitrate>
+                                <audio-bitrate>128000</audio-bitrate>
+                                <keyframe-interval>2</keyframe-interval>
+                        </config>
+                </profile>
+        </profiles>
+</service>
+```
